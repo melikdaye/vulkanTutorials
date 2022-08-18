@@ -1,0 +1,11 @@
+# ninja log v5
+1	442	6823001105960158	CMakeFiles/vulkanTutorials.dir/main.cpp.obj	bad680515b6a20a
+443	871	6823001109515929	vulkanTutorials.exe	4acf45460b744e3d
+1	418	6823001414233286	CMakeFiles/vulkanTutorials.dir/main.cpp.obj	8ad7a602a8cf2e8f
+419	785	6823001417334017	vulkanTutorials.exe	5ecde7e4a90d00e2
+2	441	6823004108823202	CMakeFiles/vulkanTutorials.dir/main.cpp.obj	8ad7a602a8cf2e8f
+441	652	6823004110197490	vulkanTutorials.exe	5ecde7e4a90d00e2
+1	448	6823005659133630	CMakeFiles/vulkanTutorials.dir/main.cpp.obj	8ad7a602a8cf2e8f
+449	688	6823005661226970	vulkanTutorials.exe	5ecde7e4a90d00e2
+1	428	6823006018536900	CMakeFiles/vulkanTutorials.dir/main.cpp.obj	8ad7a602a8cf2e8f
+429	655	6823006020523666	vulkanTutorials.exe	5ecde7e4a90d00e2

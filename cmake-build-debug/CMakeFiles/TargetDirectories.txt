@@ -1,0 +1,3 @@
+C:/Users/melik/CLionProjects/vulkanTutorials/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/melik/CLionProjects/vulkanTutorials/cmake-build-debug/CMakeFiles/vulkanTutorials.dir
+C:/Users/melik/CLionProjects/vulkanTutorials/cmake-build-debug/CMakeFiles/edit_cache.dir
