@@ -1,12 +1,12 @@
-The system is: Windows - 10.0.19043 - AMD64
+The system is: Windows - 10.0.19044 - AMD64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-Compiler: C:/Program Files (x86)/Microsoft Visual Studio 12.0/VC/bin/amd64_x86/cl.exe 
+Compiler: C:/Program Files (x86)/Microsoft Visual Studio 12.0/VC/bin/amd64/cl.exe 
 Build flags: 
 Id flags:  
 
 The output was:
 0
-Microsoft (R) C/C++ Optimizing Compiler Version 18.00.40629 for x86
+Microsoft (R) C/C++ Optimizing Compiler Version 18.00.40629 for x64
 Copyright (C) Microsoft Corporation.  All rights reserved.
 
 CMakeCCompilerId.c
@@ -21,16 +21,16 @@ Compilation of the C compiler identification source "CMakeCCompilerId.c" produce
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
 
-The C compiler identification is MSVC, found in "C:/Users/melik/CLionProjects/vulkanTutorials/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdC/CMakeCCompilerId.exe"
+The C compiler identification is MSVC, found in "C:/Users/Administrator/CLionProjects/vulkanTutorials/cmake-build-debug/CMakeFiles/3.19.2/CompilerIdC/CMakeCCompilerId.exe"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-Compiler: C:/Program Files (x86)/Microsoft Visual Studio 12.0/VC/bin/amd64_x86/cl.exe 
+Compiler: C:/Program Files (x86)/Microsoft Visual Studio 12.0/VC/bin/amd64/cl.exe 
 Build flags: 
 Id flags:  
 
 The output was:
 0
-Microsoft (R) C/C++ Optimizing Compiler Version 18.00.40629 for x86
+Microsoft (R) C/C++ Optimizing Compiler Version 18.00.40629 for x64
 Copyright (C) Microsoft Corporation.  All rights reserved.
 
 CMakeCXXCompilerId.cpp
@@ -45,31 +45,43 @@ Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" p
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
 
-The CXX compiler identification is MSVC, found in "C:/Users/melik/CLionProjects/vulkanTutorials/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdCXX/CMakeCXXCompilerId.exe"
+The CXX compiler identification is MSVC, found in "C:/Users/Administrator/CLionProjects/vulkanTutorials/cmake-build-debug/CMakeFiles/3.19.2/CompilerIdCXX/CMakeCXXCompilerId.exe"
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: C:/Users/melik/CLionProjects/vulkanTutorials/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/Administrator/CLionProjects/vulkanTutorials/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files/JetBrains/CLion 2021.3.2/bin/ninja/win/ninja.exe cmTC_d1a4a && [1/2] Building C object CMakeFiles\cmTC_d1a4a.dir\CMakeCCompilerABI.c.obj
-[2/2] Linking C executable cmTC_d1a4a.exe
+Run Build Command(s):nmake /nologo cmTC_fe3b6\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\BIN\amd64\nmake.exe"  -f CMakeFiles\cmTC_fe3b6.dir\build.make /nologo -L                  CMakeFiles\cmTC_fe3b6.dir\build
+Building C object CMakeFiles/cmTC_fe3b6.dir/CMakeCCompilerABI.c.obj
+	C:\PROGRA~2\MICROS~1.0\VC\bin\amd64\cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\nm1AB3.tmp
+CMakeCCompilerABI.c
+Linking C executable cmTC_fe3b6.exe
+	"C:\Program Files\JetBrains\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_fe3b6.dir --rc=C:\PROGRA~2\WI3CF2~1\8.1\bin\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\8.1\bin\x64\mt.exe --manifests -- C:\PROGRA~2\MICROS~1.0\VC\bin\amd64\link.exe /nologo @CMakeFiles\cmTC_fe3b6.dir\objects1.rsp @C:\Users\ADMINI~1\AppData\Local\Temp\nm1C0C.tmp
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: C:/Users/melik/CLionProjects/vulkanTutorials/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/Administrator/CLionProjects/vulkanTutorials/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files/JetBrains/CLion 2021.3.2/bin/ninja/win/ninja.exe cmTC_1f910 && [1/2] Building CXX object CMakeFiles\cmTC_1f910.dir\CMakeCXXCompilerABI.cpp.obj
-[2/2] Linking CXX executable cmTC_1f910.exe
+Run Build Command(s):nmake /nologo cmTC_64d05\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\BIN\amd64\nmake.exe"  -f CMakeFiles\cmTC_64d05.dir\build.make /nologo -L                  CMakeFiles\cmTC_64d05.dir\build
+Building CXX object CMakeFiles/cmTC_64d05.dir/CMakeCXXCompilerABI.cpp.obj
+	C:\PROGRA~2\MICROS~1.0\VC\bin\amd64\cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\nm1E3D.tmp
+CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_64d05.exe
+	"C:\Program Files\JetBrains\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_64d05.dir --rc=C:\PROGRA~2\WI3CF2~1\8.1\bin\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\8.1\bin\x64\mt.exe --manifests -- C:\PROGRA~2\MICROS~1.0\VC\bin\amd64\link.exe /nologo @CMakeFiles\cmTC_64d05.dir\objects1.rsp @C:\Users\ADMINI~1\AppData\Local\Temp\nm1E8C.tmp
 
 
 
 
 
 Detecting CXX [] compiler features compiled with the following output:
-Change Dir: C:/Users/melik/CLionProjects/vulkanTutorials/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/Administrator/CLionProjects/vulkanTutorials/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files/JetBrains/CLion 2021.3.2/bin/ninja/win/ninja.exe cmTC_f733b && [1/2] Building CXX object CMakeFiles\cmTC_f733b.dir\feature_tests.cxx.obj
-[2/2] Linking CXX executable cmTC_f733b.exe
+Run Build Command(s):nmake /nologo cmTC_4d11a\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\BIN\amd64\nmake.exe"  -f CMakeFiles\cmTC_4d11a.dir\build.make /nologo -L                  CMakeFiles\cmTC_4d11a.dir\build
+Building CXX object CMakeFiles/cmTC_4d11a.dir/feature_tests.cxx.obj
+	C:\PROGRA~2\MICROS~1.0\VC\bin\amd64\cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\nm2070.tmp
+feature_tests.cxx
+Linking CXX executable cmTC_4d11a.exe
+	"C:\Program Files\JetBrains\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_4d11a.dir --rc=C:\PROGRA~2\WI3CF2~1\8.1\bin\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\8.1\bin\x64\mt.exe --manifests -- C:\PROGRA~2\MICROS~1.0\VC\bin\amd64\link.exe /nologo @CMakeFiles\cmTC_4d11a.dir\objects1.rsp @C:\Users\ADMINI~1\AppData\Local\Temp\nm20BF.tmp
 
 
 

@@ -1,33 +1,46 @@
 #include <iostream>
 #define GLFW_INCLUDE_VULKAN
 #include "GLFW/glfw3.h"
+#include <stdexcept>
+#include <vector>
+
+#include "VulkanRenderer.h"
 
 #define GLM_FORCE_RADIANS
 #define GLM_FORCE_DEPTH_ZERO_TO_ONE //Vulkan use minimum depth value as zero
 #include "glm/glm.hpp"
 #include "glm/mat4x4.hpp"
 
-int main() {
+GLFWwindow *window;
+
+VulkanRenderer vulkanRenderer;
+
+void  initWindow(std::string wName = "Test Window",const int width = 800,const int height = 600){
     glfwInit();
+
     glfwWindowHint(GLFW_CLIENT_API,GLFW_NO_API);
-    GLFWwindow *window = glfwCreateWindow(800,600,"Test Window", nullptr, nullptr);
+    glfwWindowHint(GLFW_RESIZABLE,GLFW_FALSE);
+    window = glfwCreateWindow(width,height,wName.c_str(), nullptr, nullptr);
 
-    uint32_t extensionCount = 0;
 
-    vkEnumerateInstanceExtensionProperties(nullptr,&extensionCount, nullptr);
-    printf("Number of extensions %d \n",extensionCount);
+}
 
-    glm::mat4 testMatrix(1.0f);
-    glm::vec4 testVector(1.0f);
+int main() {
+    initWindow("Test Window",800,600);
 
-    auto result = testMatrix*testVector;
-
+    if (vulkanRenderer.init(window) == EXIT_FAILURE){
+        return  EXIT_FAILURE;
+    }
 
     while (!glfwWindowShouldClose(window)){
         glfwPollEvents();
     }
+
+    vulkanRenderer.cleanup();
+
     glfwDestroyWindow(window);
     glfwTerminate();
+
     return 0;
 }
 

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="vulkanTutorials"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="msvc8"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/Administrator/CLionProjects/vulkanTutorials/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\Administrator\CLionProjects\vulkanTutorials\cmake-build-debug\Makefile VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\Administrator\CLionProjects\vulkanTutorials\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\Administrator\CLionProjects\vulkanTutorials\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\Administrator\CLionProjects\vulkanTutorials\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/Administrator/CLionProjects/vulkanTutorials/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\Administrator\CLionProjects\vulkanTutorials\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\Administrator\CLionProjects\vulkanTutorials\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\Administrator\CLionProjects\vulkanTutorials\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\Administrator\CLionProjects\vulkanTutorials\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="vulkanTutorials">
+				<Option output="C:/Users/Administrator/CLionProjects/vulkanTutorials/cmake-build-debug/vulkanTutorials.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/vulkanTutorials/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Users/Administrator/CLionProjects/vulkanTutorials/include"/>
+					<Add directory="D:/GLFW/include"/>
+					<Add directory="D:/VulkanSDK/1.3.216.0/Include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\INCLUDE"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\ATLMFC\INCLUDE"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\8.1\include\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\8.1\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\8.1\include\winrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\Administrator\CLionProjects\vulkanTutorials\cmake-build-debug\Makefile VERBOSE=1 vulkanTutorials"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\Administrator\CLionProjects\vulkanTutorials\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\Administrator\CLionProjects\vulkanTutorials\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\Administrator\CLionProjects\vulkanTutorials\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="vulkanTutorials/fast">
+				<Option output="C:/Users/Administrator/CLionProjects/vulkanTutorials/cmake-build-debug/vulkanTutorials.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/vulkanTutorials/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Users/Administrator/CLionProjects/vulkanTutorials/include"/>
+					<Add directory="D:/GLFW/include"/>
+					<Add directory="D:/VulkanSDK/1.3.216.0/Include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\INCLUDE"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\ATLMFC\INCLUDE"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\8.1\include\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\8.1\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\8.1\include\winrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\Administrator\CLionProjects\vulkanTutorials\cmake-build-debug\Makefile VERBOSE=1 vulkanTutorials/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\Administrator\CLionProjects\vulkanTutorials\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\Administrator\CLionProjects\vulkanTutorials\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\Administrator\CLionProjects\vulkanTutorials\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/Administrator/CLionProjects/vulkanTutorials/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\Administrator\CLionProjects\vulkanTutorials\cmake-build-debug\Makefile VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\Administrator\CLionProjects\vulkanTutorials\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\Administrator\CLionProjects\vulkanTutorials\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\Administrator\CLionProjects\vulkanTutorials\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/Administrator/CLionProjects/vulkanTutorials/VulkanRenderer.cpp">
+			<Option target="vulkanTutorials"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/vulkanTutorials/VulkanRenderer.h">
+			<Option target="vulkanTutorials"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/vulkanTutorials/main.cpp">
+			<Option target="vulkanTutorials"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/vulkanTutorials/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
