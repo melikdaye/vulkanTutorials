@@ -19,11 +19,14 @@ class VulkanRenderer {
         VulkanRenderer();
 
         int init(GLFWwindow * newWindow);
+        void draw();
         void cleanup();
 
         ~VulkanRenderer();
 
     private:
+
+        int currentFrame = 0;
         GLFWwindow  *window;
 
         //Vulkan components;
@@ -38,13 +41,24 @@ class VulkanRenderer {
         VkSurfaceKHR surface;
         VkSwapchainKHR swapChain;
         std::vector<SwapChainImage> swapChainImages;
+        std::vector<VkFramebuffer> swapChainFrameBuffers;
+        std::vector<VkCommandBuffer> commandBuffers;
+        std::vector<VkFence> drawFences;
 
         VkPipeline graphicsPipeline;
         VkPipelineLayout pipelineLayout;
         VkRenderPass  renderPass;
 
+        VkCommandPool graphicsCommandPool;
+
         VkFormat swapChainImageFormat;
         VkExtent2D swapChainExtent;
+
+
+        std::vector<VkSemaphore> imageAvailable;
+        std::vector<VkSemaphore> renderFinished;
+
+
 
 
         //Vulkan Functions
@@ -55,6 +69,13 @@ class VulkanRenderer {
         void createSwapChain();
         void createRenderPass();
         void createGraphicsPipeline();
+        void createFrameBuffers();
+        void createCommandPool();
+        void createCommandBuffers();
+        void createSynchronisation();
+
+
+        void recordCommands();
 
         //- Get Functions
 
@@ -79,6 +100,7 @@ class VulkanRenderer {
 
         VkImageView createImageView(VkImage image,VkFormat format,VkImageAspectFlags aspectFlags);
         VkShaderModule createShaderModule(const std::vector<char> &code);
+
 
 
 
