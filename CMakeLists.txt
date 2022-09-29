@@ -14,6 +14,6 @@ set(CMAKE_CXX_STANDARD 11)
 
 
 
-add_executable(vulkanTutorials  main.cpp VulkanRenderer.cpp VulkanRenderer.h)
+add_executable(vulkanTutorials  main.cpp VulkanRenderer.cpp VulkanRenderer.h Mesh.cpp Mesh.h)
 
 target_link_libraries(vulkanTutorials vulkan-1 glfw3)
