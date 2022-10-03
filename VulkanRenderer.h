@@ -13,6 +13,7 @@
 #include <stdexcept>
 #include <algorithm>
 #include <array>
+#include "Mesh.h"
 
 class VulkanRenderer {
     public:
@@ -25,6 +26,9 @@ class VulkanRenderer {
         ~VulkanRenderer();
 
     private:
+
+
+        std::vector<Mesh> meshList;
 
         int currentFrame = 0;
         GLFWwindow  *window;

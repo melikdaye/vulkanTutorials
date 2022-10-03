@@ -25,6 +25,31 @@ int VulkanRenderer::init(GLFWwindow *newWindow) {
         createGraphicsPipeline();
         createFrameBuffers();
         createCommandPool();
+
+        std::vector<Vertex> meshVertices = {
+                {{-0.1,-0.4,0.0},{1.0f,0.0f,0.0f}},
+                {{-0.1,0.4,0.0},{0.0f,1.0f,0.0f}},
+                {{-0.9,0.4,0.0},{0.0f,0.0f,1.0f}},
+                {{-0.9,-0.4,0.0},{1.0f,0.0f,1.0f}},
+        };
+
+        std::vector<Vertex> meshVertices2 = {
+                {{0.9,-0.4,0.0},{1.0f,0.0f,0.0f}},
+                {{0.9,0.4,0.0},{0.0f,1.0f,0.0f}},
+                {{0.1,0.4,0.0},{0.0f,0.0f,1.0f}},
+                {{0.1,-0.4,0.0},{1.0f,0.0f,1.0f}},
+        };
+
+        std::vector<uint32_t> meshIndices = {
+                0,1,2,2,3,0
+        };
+
+        Mesh firstMesh = Mesh(mainDevice.physicalDevice,mainDevice.logicalDevice,graphicsQueue,graphicsCommandPool,&meshVertices,&meshIndices);
+        Mesh secondMesh = Mesh(mainDevice.physicalDevice,mainDevice.logicalDevice,graphicsQueue,graphicsCommandPool,&meshVertices2,&meshIndices);
+
+        meshList.push_back(firstMesh);
+        meshList.push_back(secondMesh);
+
         createCommandBuffers();
         recordCommands();
         createSynchronisation();
@@ -344,12 +369,17 @@ void VulkanRenderer::createGraphicsPipeline() {
     bindingDescription.stride = sizeof(Vertex);
     bindingDescription.inputRate = VK_VERTEX_INPUT_RATE_VERTEX;
 
-    std::array<VkVertexInputAttributeDescription,1> attributeDescriptions;
+    std::array<VkVertexInputAttributeDescription,2> attributeDescriptions;
 
     attributeDescriptions[0].binding = 0;
     attributeDescriptions[0].location = 0;
     attributeDescriptions[0].format = VK_FORMAT_R32G32B32_SFLOAT;
     attributeDescriptions[0].offset = offsetof(Vertex,pos);
+
+    attributeDescriptions[1].binding = 0;
+    attributeDescriptions[1].location = 1;
+    attributeDescriptions[1].format = VK_FORMAT_R32G32B32_SFLOAT;
+    attributeDescriptions[1].offset = offsetof(Vertex,col);
 
     VkPipelineVertexInputStateCreateInfo vertexInputCreateInfo = {};
     vertexInputCreateInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO;
@@ -554,7 +584,16 @@ void VulkanRenderer::recordCommands() {
 
         vkCmdBindPipeline(commandBuffers[i],VK_PIPELINE_BIND_POINT_GRAPHICS,graphicsPipeline);
 
-        vkCmdDraw(commandBuffers[i],3,1,0,0);
+        for (int j = 0; j < meshList.size(); ++j) {
+            VkBuffer vertexBuffers[] = {meshList[j].getVertexBuffer()};
+            VkDeviceSize offsets[] = {0};
+            vkCmdBindVertexBuffers(commandBuffers[i],0,1,vertexBuffers,offsets);
+            vkCmdBindIndexBuffer(commandBuffers[i],meshList[j].getIndexBuffer(),0,VK_INDEX_TYPE_UINT32);
+
+//        vkCmdDraw(commandBuffers[i],static_cast<uint32_t>(firstMesh.getVertexCount()),1,0,0);
+            vkCmdDrawIndexed(commandBuffers[i],static_cast<uint32_t>(meshList[j].getIndexCount()),1,0,0,0);
+        }
+
 
         vkCmdEndRenderPass(commandBuffers[i]);
 
@@ -593,6 +632,11 @@ void VulkanRenderer::createSynchronisation() {
 void VulkanRenderer::cleanup() {
 
     vkDeviceWaitIdle(mainDevice.logicalDevice);
+
+    for (int i = 0; i < meshList.size() ; ++i) {
+        meshList[i].destroyBuffers();
+    }
+
     for (size_t i = 0; i < MAX_FRAME_DRAWS; ++i) {
         vkDestroySemaphore(mainDevice.logicalDevice, renderFinished[i], nullptr);
         vkDestroySemaphore(mainDevice.logicalDevice, imageAvailable[i], nullptr);
